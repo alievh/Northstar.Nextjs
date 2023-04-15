@@ -212,4 +212,60 @@ nav {
 #footer .footer-privacy__payment-methods img:last-child {
   margin: 0;
 }
+
+.product-container {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.product-container a {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.product-container span {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.products-section {
+  padding: 42px 0;
+}
+
+.products-section h3 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.products-section p {
+  font-size: 20px;
+  text-align: center;
+  margin: 16px 0 48px 0;
+}
+
+.topsellers-section {
+  padding: 42px 0;
+}
+
+.topsellers-section h3 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.topsellers-section p {
+  text-align: center;
+  font-size: 20px;
+  margin: 16px 0 48px 0;
+}
+
+.topsellers-section button {
+  width: 160px;
+  background-color: #024e82;
+  color: white;
+  padding: 18px 0;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=main.css.map */

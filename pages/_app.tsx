@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <NextNProgress />
+      <NextNProgress color="#1D1D1D" />
       <Component {...pageProps} />
       <Footer />
     </div>
