@@ -1,0 +1,18 @@
+.benefit {
+  @include flex(unset, unset);
+
+  &__icons {
+    margin-right: 22px;
+  }
+
+  &__content {
+    h5 {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+  }
+}

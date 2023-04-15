@@ -20,8 +20,17 @@
     @include flex(space-between, center);
     flex: 4;
 
+    @media screen and (max-width: 992px) {
+        @include flex(end, center);
+
+    }
+
     &__lists {
       @include flex(unset, unset);
+
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
 
       li {
         margin-right: 8px;
@@ -45,8 +54,17 @@
       li {
         margin-right: 28px;
 
+        @media screen and (max-width: 992px) {
+            display: none;
+          }
+
         &:last-child {
           margin-right: 0;
+          display: none;
+
+          @media screen and (max-width: 992px) {
+            display: block;
+          }
         }
       }
     }
