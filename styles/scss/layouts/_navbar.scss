@@ -1,0 +1,54 @@
+#header {
+  width: 100%;
+  @include flex(unset, unset);
+  padding: 22px 0;
+
+  .header {
+    &__logo {
+        flex: 1;
+      a {
+        font-size: 36px;
+
+        &:hover {
+            color: $font-black;
+        }
+      }
+    }
+  }
+
+  .navigation {
+    @include flex(space-between, center);
+    flex:4;
+
+    &__lists {
+      @include flex(unset, unset);
+
+      li {
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          padding: 4px;
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    &__icons {
+      @include flex(unset, center);
+
+      li {
+        margin-right: 28px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

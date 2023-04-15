@@ -1,0 +1,215 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: #1D1D1D;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #024E82;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+nav {
+  padding: 0;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  padding: 22px 0;
+}
+
+#header .header__logo {
+  flex: 1;
+}
+
+#header .header__logo a {
+  font-size: 36px;
+}
+
+#header .header__logo a:hover {
+  color: #1D1D1D;
+}
+
+#header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 4;
+}
+
+#header .navigation__lists {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+}
+
+#header .navigation__lists li {
+  margin-right: 8px;
+}
+
+#header .navigation__lists li:last-child {
+  margin-right: 0;
+}
+
+#header .navigation__lists li a {
+  padding: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+#header .navigation__icons {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+}
+
+#header .navigation__icons li {
+  margin-right: 28px;
+}
+
+#header .navigation__icons li:last-child {
+  margin-right: 0;
+}
+
+#footer {
+  padding: 48px 0 0 0;
+  background-color: #FBFBFB;
+}
+
+#footer h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+#footer .footer__lists {
+  margin-top: 30px;
+}
+
+#footer .footer__lists li {
+  margin-bottom: 12px;
+}
+
+#footer .footer__lists li:last-child {
+  margin: 0;
+}
+
+#footer .footer__lists li a {
+  font-size: 16px;
+}
+
+#footer form {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+}
+
+#footer form input {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  padding: 17px 0;
+  border-bottom: 1px solid #1D1D1D;
+  flex: 1;
+}
+
+#footer form button {
+  background-color: transparent;
+  border: none;
+}
+
+#footer .footer-privacy {
+  border-top: 1px solid #E8E8E8;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: unset;
+  margin-top: 96px;
+}
+
+#footer .footer-privacy__policy p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#footer .footer-privacy__policy p:last-child {
+  margin: 0;
+}
+
+#footer .footer-privacy__payment-methods img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  margin-right: 16px;
+}
+
+#footer .footer-privacy__payment-methods img:last-child {
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */

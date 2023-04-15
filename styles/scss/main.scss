@@ -1,0 +1,13 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+
+@import 'layouts/navbar';
+@import 'layouts/footer';
+
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/cart';
+@import 'pages/contact';
+@import 'pages/checkout';
