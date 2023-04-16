@@ -495,4 +495,78 @@ nav {
 .about-buybanner-section {
   padding-top: 90px;
 }
+
+.contact-form-section {
+  padding: 150px 0 110px 0;
+}
+
+.contact-form-section h4 {
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 32px;
+}
+
+.contact-form-section h5 {
+  font-size: 24px;
+  line-height: 48px;
+  margin-bottom: 16px;
+}
+
+.contact-form-section .visit-us {
+  margin-bottom: 48px;
+}
+
+.contact-form-section .get-in-touch ul {
+  padding: 0 100px 0 0;
+}
+
+.contact-form-section .get-in-touch ul li:first-child {
+  margin-bottom: 24px;
+}
+
+.contact-form-section form {
+  padding-right: 50px;
+}
+
+.contact-form-section form .form-top {
+  display: flex;
+  margin-top: 48px;
+}
+
+.contact-form-section form .form-top .form-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-section form .form-top .form-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-section form .form-top input {
+  padding: 16px 8px;
+  font-size: 18px;
+  border: 1px solid #EBEBEB;
+}
+
+.contact-form-section form .form-message {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.contact-form-section form .form-message textarea {
+  font-size: 18px;
+  resize: none;
+  border: 1px solid #EBEBEB;
+  padding: 8px;
+}
+
+.contact-form-section form .form-message textarea:focus-visible {
+  outline: none;
+}
+
+.contact-form-section form label {
+  margin-bottom: 12px;
+}
 /*# sourceMappingURL=main.css.map */

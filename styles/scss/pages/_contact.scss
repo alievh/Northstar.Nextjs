@@ -1,0 +1,74 @@
+.contact-form-section {
+  padding: 150px 0 110px 0;
+
+  h4 {
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+
+  h5 {
+    font-size: 24px;
+    line-height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .visit-us {
+    margin-bottom: 48px;
+  }
+
+  .get-in-touch {
+    ul {
+      padding: 0 100px 0 0;
+      li {
+        &:first-child {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  form {
+    padding-right: 50px;
+    .form-top {
+      display: flex;
+      margin-top: 48px;
+      .form-email {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-name {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        padding: 16px 8px;
+        font-size: 18px;
+        border: 1px solid $input-border;
+      }
+    }
+
+    .form-message {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      textarea {
+        font-size: 18px;
+        resize: none;
+        border: 1px solid $input-border;
+        padding: 8px;
+
+        &:focus-visible {
+            outline: none;
+        }
+      }
+    }
+
+    label {
+      margin-bottom: 12px;
+    }
+  }
+}
