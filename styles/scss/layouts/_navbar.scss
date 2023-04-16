@@ -21,7 +21,7 @@
     flex: 4;
 
     @media screen and (max-width: 992px) {
-        @include flex(end, center);
+        @include flex(flex-end, center);
 
     }
 

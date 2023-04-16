@@ -11,7 +11,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
     <header id="header">
       <div className="container d-flex">
         <div className="header__logo">
-          <Link href="/">NortStar</Link>
+          <Link href="/">NorthStar</Link>
         </div>
         <nav className="navigation">
           <ul className={`navigation__lists ${arimo.className}`}>

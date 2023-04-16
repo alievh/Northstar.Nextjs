@@ -1,0 +1,19 @@
+.testimonial {
+    @include flex(unset, center);
+    padding: 0 200px;
+    margin-bottom: 240px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__username {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 24px;
+        line-height: 36px;
+        margin: 24px 0 32px 0;
+    }
+}
