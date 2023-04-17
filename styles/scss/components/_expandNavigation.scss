@@ -1,0 +1,22 @@
+.expand-navigation {
+  @include flex(flex-start, center);
+
+  li {
+    text-transform: uppercase;
+
+    &:first-child {
+      display: flex;
+      color: #888888;
+
+      &::after {
+        content: "/";
+        display: block;
+        margin: 0 3px;
+      }
+
+      a {
+        color: #888888;
+      }
+    }
+  }
+}

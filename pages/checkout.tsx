@@ -1,3 +1,4 @@
+import ExpandNavigation from "@/components/ExpandNavigation";
 import { FC } from "react";
 
 interface checkoutProps {}
@@ -5,7 +6,11 @@ interface checkoutProps {}
 const checkout: FC<checkoutProps> = ({}) => {
   return (
       <main>
-        <h1>CheckoutPage</h1>
+        <section className="expand-navigation-section">
+        <div className="container">
+          <ExpandNavigation pageName="Checkout" />
+        </div>
+      </section>
       </main>
   );
 };

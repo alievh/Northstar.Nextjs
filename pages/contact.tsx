@@ -28,19 +28,19 @@ const contact: FC<contactProps> = ({}) => {
                 <div className="form-top">
                   <div className="row w-100">
                     <div className="form-name col-lg-6">
-                      <label>Name</label>
-                      <input></input>
+                      <label htmlFor="name">Name</label>
+                      <input name="name" id="name" />
                     </div>
                     <div className="form-email col-lg-6">
-                      <label>Email</label>
-                      <input></input>
+                      <label htmlFor="name">Email</label>
+                      <input name="name" id="name" />
                     </div>
                   </div>
                 </div>
                 <div className="row w-100">
                   <div className="form-message col-lg-12">
-                    <label>Message</label>
-                    <textarea rows={12}></textarea>
+                    <label htmlFor="message">Message</label>
+                    <textarea name="message" id="message" rows={12}></textarea>
                   </div>
                 </div>
               </form>

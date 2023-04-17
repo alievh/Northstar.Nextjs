@@ -383,6 +383,31 @@ nav {
   margin-bottom: 36px;
 }
 
+.expand-navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.expand-navigation li {
+  text-transform: uppercase;
+}
+
+.expand-navigation li:first-child {
+  display: flex;
+  color: #888888;
+}
+
+.expand-navigation li:first-child::after {
+  content: "/";
+  display: block;
+  margin: 0 3px;
+}
+
+.expand-navigation li:first-child a {
+  color: #888888;
+}
+
 .home-banner-section {
   width: 100%;
 }
@@ -496,6 +521,87 @@ nav {
   padding-top: 90px;
 }
 
+.expand-navigation-section {
+  padding: 35px 0 40px 0;
+}
+
+.cart-products-section {
+  padding: 40px 0 50px 0;
+}
+
+.cart-products-section table .remove-button {
+  background-color: transparent;
+  border: none;
+}
+
+.cart-products-section table .product-name {
+  color: #555555;
+}
+
+.cart-products-section table .product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-products-section table .product-price {
+  color: #555555;
+}
+
+.cart-products-section table .product-quantity-input {
+  border: 2px solid #ebebeb;
+  text-align: center;
+  width: 52px;
+  height: 42px;
+}
+
+.cart-products-section table thead th {
+  padding: 20px 0;
+}
+
+.cart-products-section table tbody tr {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 10px 0;
+}
+
+.cart-products-section table tbody tr td {
+  padding: 30px 0;
+}
+
+.cart-totals-section {
+  padding: 40px 0 120px 0;
+}
+
+.cart-totals-section h4 {
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+
+.cart-totals-section ul {
+  margin-bottom: 40px;
+}
+
+.cart-totals-section ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 18px 0;
+}
+
+.cart-totals-section ul li:last-child {
+  border: none;
+}
+
+.cart-totals-section a {
+  padding: 18px 36px;
+  background-color: #d6763c;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .contact-form-section {
   padding: 150px 0 110px 0;
 }
@@ -568,5 +674,9 @@ nav {
 
 .contact-form-section form label {
   margin-bottom: 12px;
+}
+
+.expand-navigation-section {
+  padding: 35px 0 40px 0;
 }
 /*# sourceMappingURL=main.css.map */
