@@ -420,6 +420,13 @@ nav {
   flex-direction: column;
 }
 
+@media screen and (max-width: 992px) {
+  .founder {
+    align-items: center;
+    margin-bottom: 24px;
+  }
+}
+
 .founder a {
   display: inline-block;
   margin-top: 32px;
@@ -434,6 +441,19 @@ nav {
   margin-bottom: 240px;
 }
 
+@media screen and (max-width: 1200px) {
+  .testimonial {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonial {
+    flex-direction: column;
+    margin-bottom: 120px;
+  }
+}
+
 .testimonial:last-child {
   margin-bottom: 0;
 }
@@ -442,10 +462,47 @@ nav {
   font-size: 21px;
 }
 
+@media screen and (max-width: 992px) {
+  .testimonial__username {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonial__username {
+    display: block;
+    text-align: center;
+  }
+}
+
 .testimonial p {
   font-size: 24px;
   line-height: 36px;
   margin: 24px 0 32px 0;
+}
+
+@media screen and (max-width: 992px) {
+  .testimonial p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonial p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonial__picture img {
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonial__text svg {
+    display: none;
+  }
 }
 
 .about-buybanner {
@@ -457,6 +514,12 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (max-width: 992px) {
+  .about-buybanner {
+    margin-bottom: 24px;
+  }
 }
 
 .about-buybanner a {
