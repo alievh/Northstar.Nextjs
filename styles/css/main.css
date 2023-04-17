@@ -693,8 +693,20 @@ nav {
   align-items: center;
 }
 
+@media screen and (max-width: 992px) {
+  .cart-products-section table .product-image {
+    display: none;
+  }
+}
+
 .cart-products-section table .product-price {
   color: #555555;
+}
+
+@media screen and (max-width: 460px) {
+  .cart-products-section table .product-price {
+    display: none;
+  }
 }
 
 .cart-products-section table .product-quantity-input {
@@ -706,6 +718,18 @@ nav {
 
 .cart-products-section table thead th {
   padding: 20px 0;
+}
+
+@media screen and (max-width: 992px) {
+  .cart-products-section table thead th:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .cart-products-section table thead th:last-child {
+    display: none;
+  }
 }
 
 .cart-products-section table tbody tr {
