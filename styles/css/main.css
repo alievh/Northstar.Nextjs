@@ -174,8 +174,28 @@ nav {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 992px) {
+  #footer h4 {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer h4 {
+    text-align: center;
+  }
+}
+
 #footer .footer__lists {
   margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  #footer .footer__lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 #footer .footer__lists li {
@@ -198,6 +218,12 @@ nav {
   align-items: unset;
 }
 
+@media screen and (max-width: 768px) {
+  #footer form {
+    justify-content: center;
+  }
+}
+
 #footer form input {
   font-size: 16px;
   background-color: transparent;
@@ -205,6 +231,12 @@ nav {
   padding: 17px 0;
   border-bottom: 1px solid #1D1D1D;
   flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #footer form input {
+    flex: 0;
+  }
 }
 
 #footer form button {
@@ -218,7 +250,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: unset;
+  flex-wrap: wrap;
   margin-top: 96px;
+}
+
+@media screen and (max-width: 531px) {
+  #footer .footer-privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 #footer .footer-privacy__policy p {
@@ -238,6 +279,12 @@ nav {
 
 #footer .footer-privacy__payment-methods img:last-child {
   margin: 0;
+}
+
+@media screen and (max-width: 531px) {
+  #footer .footer-privacy__payment-methods {
+    margin-top: 24px;
+  }
 }
 
 .product-container {
@@ -267,8 +314,26 @@ nav {
   background-color: #000;
 }
 
+@media screen and (max-width: 992px) {
+  .buybanner-container {
+    margin-bottom: 24px;
+  }
+}
+
 .buybanner-container.p-150 {
   padding: 120px 150px;
+}
+
+@media screen and (max-width: 1400px) {
+  .buybanner-container.p-150 {
+    padding: 120px 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .buybanner-container.p-150 {
+    padding: 120px 50px;
+  }
 }
 
 .buybanner-container.p-50 {
@@ -280,6 +345,18 @@ nav {
   font-size: 32px;
   color: #fff;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1200px) {
+  .buybanner-container h3 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .buybanner-container h3 {
+    font-size: 20px;
+  }
 }
 
 .buybanner-container p {
@@ -301,6 +378,15 @@ nav {
   display: flex;
   justify-content: unset;
   align-items: unset;
+}
+
+@media screen and (max-width: 992px) {
+  .benefit {
+    margin-bottom: 24px;
+  }
+  .benefit:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .benefit__icons {

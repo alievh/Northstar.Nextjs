@@ -4,8 +4,22 @@
   width: 100%;
   background-color: $black;
 
+  @media screen and (max-width: 992px) {
+    margin-bottom: 24px;
+  }
+
+  
+
   &.p-150 {
     padding: 120px 150px;
+
+    @media screen and (max-width: 1400px) {
+      padding: 120px 100px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      padding: 120px 50px;
+    }
   }
 
   &.p-50 {
@@ -17,6 +31,14 @@
     font-size: 32px;
     color: $white;
     text-transform: uppercase;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 450px) {
+      font-size: 20px;
+    }
 
   }
 

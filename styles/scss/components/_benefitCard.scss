@@ -1,6 +1,14 @@
 .benefit {
   @include flex(unset, unset);
 
+  @media screen and (max-width: 992px) {
+    margin-bottom: 24px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &__icons {
     margin-right: 22px;
   }

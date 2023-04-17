@@ -12,13 +12,14 @@ interface ProductProps {
 
 const Product: FC<ProductProps> = ({ image, name, price }) => {
   return (
-    <div className="col-lg-3 product-container">
+    <div className="col-xl-3 col-lg-4 col-md-6 product-container">
       <a href="#">
         <Image
           src={require(`../assets/images/${image}`)}
           alt="Product picture"
           quality={100}
           sizes="300px"
+          style={{width: "100%", objectFit: "cover"}}
         />
       </a>
       <a href="#">

@@ -12,7 +12,7 @@ const Footer: FC<FooterProps> = ({}) => {
     <footer id="footer">
       <div className="container">
         <div className="row">
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6">
             <h4 className={arimo.className}>Company Info</h4>
             <ul className="footer__lists">
               <li>
@@ -29,7 +29,7 @@ const Footer: FC<FooterProps> = ({}) => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6">
             <h4 className={arimo.className}>Help Links</h4>
             <ul className="footer__lists">
               <li>
@@ -49,7 +49,7 @@ const Footer: FC<FooterProps> = ({}) => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6">
             <h4 className={arimo.className}>Useful Links</h4>
             <ul className="footer__lists">
               <li>
@@ -66,7 +66,7 @@ const Footer: FC<FooterProps> = ({}) => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-6">
             <h4 className={arimo.className}>Get In The Know</h4>
             <form>
               <input placeholder="Enter email" />
