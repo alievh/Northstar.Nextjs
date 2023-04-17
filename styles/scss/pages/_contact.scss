@@ -15,6 +15,10 @@
 
   .visit-us {
     margin-bottom: 48px;
+
+    @media screen and (max-width: 992px) {
+      margin-top: 24px;
+    }
   }
 
   .get-in-touch {
@@ -30,6 +34,10 @@
 
   form {
     padding-right: 50px;
+
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+    }
     .form-top {
       display: flex;
       margin-top: 48px;
@@ -41,12 +49,20 @@
       .form-name {
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: 992px) {
+          margin-bottom: 20px;
+        }
       }
 
       input {
         padding: 16px 8px;
         font-size: 18px;
         border: 1px solid $input-border;
+
+        @media screen and (max-width: 500px) {
+          padding: 8px;
+        }
       }
     }
 

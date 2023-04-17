@@ -771,6 +771,12 @@ nav {
   margin-bottom: 48px;
 }
 
+@media screen and (max-width: 992px) {
+  .contact-form-section .visit-us {
+    margin-top: 24px;
+  }
+}
+
 .contact-form-section .get-in-touch ul {
   padding: 0 100px 0 0;
 }
@@ -781,6 +787,12 @@ nav {
 
 .contact-form-section form {
   padding-right: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form-section form {
+    padding-right: 0;
+  }
 }
 
 .contact-form-section form .form-top {
@@ -798,10 +810,22 @@ nav {
   flex-direction: column;
 }
 
+@media screen and (max-width: 992px) {
+  .contact-form-section form .form-top .form-name {
+    margin-bottom: 20px;
+  }
+}
+
 .contact-form-section form .form-top input {
   padding: 16px 8px;
   font-size: 18px;
   border: 1px solid #EBEBEB;
+}
+
+@media screen and (max-width: 500px) {
+  .contact-form-section form .form-top input {
+    padding: 8px;
+  }
 }
 
 .contact-form-section form .form-message {

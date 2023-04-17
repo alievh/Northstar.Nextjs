@@ -186,7 +186,7 @@ const SingleProduct: FC<singleProductProps> = ({}) => {
                     }
                     onClick={activateReviews}
                   >
-                    Reviews
+                    Reviews (0)
                   </button>
                 </li>
               </ul>
