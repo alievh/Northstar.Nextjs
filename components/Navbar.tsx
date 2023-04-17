@@ -27,7 +27,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           </ul>
           <ul className="navigation__icons">
             <li>
-              <a href="#">
+              <Link href="/">
                 <svg
                   width="24"
                   height="25"
@@ -50,7 +50,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                     stroke-linejoin="round"
                   />
                 </svg>
-              </a>
+              </Link>
             </li>
             <li>
               <Link href="/cart">
