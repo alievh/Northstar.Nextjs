@@ -1,6 +1,7 @@
 import ExpandNavigation from "@/components/ExpandNavigation";
 import { Arimo, Baloo_2 } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
@@ -77,7 +78,7 @@ const cart: FC<cartProps> = ({}) => {
                   <span>$59.00</span>
                 </li>
               </ul>
-              <a href="#">Proceed To Checkout</a>
+              <Link href="/checkout">Proceed To Checkout</Link>
             </div>
           </div>
         </div>

@@ -14,7 +14,9 @@ const Founder: FC<FounderProps> = ({ image, fullname }) => {
     <div className="col-lg-3">
       <div className="founder">
         <Image src={require(`../assets/images/${image}`)} alt="Founder" />
-        <a className={arimo.className} href="#">{fullname}</a>
+        <a className={arimo.className} href="#">
+          {fullname}
+        </a>
       </div>
     </div>
   );

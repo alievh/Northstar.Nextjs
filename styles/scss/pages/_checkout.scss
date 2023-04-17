@@ -1,3 +1,99 @@
 .expand-navigation-section {
-    padding: 35px 0 40px 0;
+  padding: 35px 0 40px 0;
+}
+
+.billing-details-section {
+  h4 {
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 24px;
+  }
+  form {
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 18px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        margin-bottom: 3px;
+
+        span {
+          color: #d6763c;
+        }
+      }
+
+      input {
+        padding: 11px 16px 17px 16px;
+        border: 1px solid #ebebeb;
+      }
+    }
+  }
+}
+
+.your-order-section {
+  padding: 54px 0;
+  h4 {
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 24px;
+  }
+
+  table {
+    border: 1px solid #ebebeb;
+
+    thead {
+      th {
+        padding: 18px 0 22px 10px;
+      }
+    }
+
+    tbody {
+      td {
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+        padding: 18px 0 22px 10px;
+      }
+
+      tr {
+        &:last-child {
+          td {
+            &:last-child {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.place-order-section {
+  .place-order-container {
+    border: 1px solid #ebebeb;
+    padding: 34px 24px 54px 24px;
+
+    .cash-on-container {
+      border: 1px solid #ebebeb;
+      background-color: #fbfbfb;
+      padding: 25px 16px;
+      margin-bottom: 47px;
+    }
+
+    .place-order-button {
+      @include flex(flex-end, unset);
+
+      button {
+        padding: 14px 36px;
+        background-color: #d6763c;
+        border-radius: 3px;
+        color: $white;
+        text-transform: uppercase;
+        border: 1px solid #d6763c;
+      }
+    }
+  }
 }
