@@ -6,7 +6,7 @@ const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
 interface checkoutProps {}
 
-const checkout: FC<checkoutProps> = ({}) => {
+const Checkout: FC<checkoutProps> = ({}) => {
   return (
     <main>
       <section className="expand-navigation-section">
@@ -114,4 +114,4 @@ const checkout: FC<checkoutProps> = ({}) => {
   );
 };
 
-export default checkout;
+export default Checkout;

@@ -12,7 +12,7 @@ const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
 interface aboutProps {}
 
-const about: FC<aboutProps> = ({}) => {
+const About: FC<aboutProps> = ({}) => {
   return (
     <main>
       <section className="about-banner-section">
@@ -75,4 +75,4 @@ const about: FC<aboutProps> = ({}) => {
   );
 };
 
-export default about;
+export default About;

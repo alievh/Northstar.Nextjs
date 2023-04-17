@@ -13,7 +13,7 @@ const sourceSanPro = Source_Sans_Pro({ weight: "400", subsets: ["latin"] });
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 interface singleProductProps {}
 
-const singleProduct: FC<singleProductProps> = ({}) => {
+const SingleProduct: FC<singleProductProps> = ({}) => {
   const [isDescriptionActive, setIsDescriptionActive] = useState(true);
   const [isReviewsActive, setIsReviewsActive] = useState(false);
   const router = useRouter();
@@ -221,4 +221,4 @@ const singleProduct: FC<singleProductProps> = ({}) => {
   );
 };
 
-export default singleProduct;
+export default SingleProduct;

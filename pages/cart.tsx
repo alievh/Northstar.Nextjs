@@ -9,7 +9,7 @@ const baloo = Baloo_2({ weight: "700", subsets: ["latin"] });
 
 interface cartProps {}
 
-const cart: FC<cartProps> = ({}) => {
+const Cart: FC<cartProps> = ({}) => {
   return (
     <main>
       <section className="expand-navigation-section">
@@ -87,4 +87,4 @@ const cart: FC<cartProps> = ({}) => {
   );
 };
 
-export default cart;
+export default Cart;

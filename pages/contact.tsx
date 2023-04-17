@@ -7,7 +7,7 @@ const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
 interface contactProps {}
 
-const contact: FC<contactProps> = ({}) => {
+const Contact: FC<contactProps> = ({}) => {
   return (
     <main>
       <section className="contact-banner-section">
@@ -68,4 +68,4 @@ const contact: FC<contactProps> = ({}) => {
   );
 };
 
-export default contact;
+export default Contact;
