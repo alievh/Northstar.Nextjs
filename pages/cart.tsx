@@ -51,7 +51,7 @@ const Cart: FC<cartProps> = ({}) => {
                 </td>
                 <td className="product-price">$59.00</td>
                 <td>
-                  <input className="product-quantity-input" defaultValue={1} />
+                  <input className="product-quantity-input" type="number" defaultValue={1} />
                 </td>
                 <td>$59.00</td>
               </tr>

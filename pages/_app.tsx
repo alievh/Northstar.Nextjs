@@ -5,7 +5,7 @@ import "@/styles/css/main.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Lato } from "next/font/google";
-import NextNProgress from 'nextjs-progressbar';
+import NextNProgress from "nextjs-progressbar";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 

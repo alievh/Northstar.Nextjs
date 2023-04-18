@@ -1,12 +1,24 @@
 import { Arimo } from "next/font/google";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useState } from "react";
+import BurgerMenu from "./BurgerMenu";
+import { Router } from "next/router";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
+  const [isBurgerMenuActive, setIsBurgerMenuActive] = useState(false);
+
+  const burgerMenuHandler = () => {
+    setIsBurgerMenuActive(!isBurgerMenuActive);
+  }
+
+  Router.events.on('routeChangeStart', () => {
+    setIsBurgerMenuActive(false);
+  })
+
   return (
     <header id="header">
       <div className="container d-flex">
@@ -26,7 +38,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
             </li>
           </ul>
           <ul className="navigation__icons">
-            <li>
+            <li className="navigation__icons-item">
               <Link href="/">
                 <svg
                   width="24"
@@ -52,7 +64,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                 </svg>
               </Link>
             </li>
-            <li>
+            <li className="navigation__icons-item">
               <Link href="/cart">
                 <svg
                   width="24"
@@ -85,8 +97,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
                 </svg>
               </Link>
             </li>
-            <li>
-              <a href="#">
+            <li className="navigation__icons-item">
+              <button onClick={burgerMenuHandler} type="button">
                 <svg
                   width="24"
                   height="25"
@@ -116,7 +128,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
                     stroke-linejoin="round"
                   />
                 </svg>
-              </a>
+              </button>
+              <BurgerMenu className={isBurgerMenuActive ? "burger-menu active" : "burger-menu"} />
             </li>
           </ul>
         </nav>

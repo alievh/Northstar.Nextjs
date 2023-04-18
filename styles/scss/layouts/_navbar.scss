@@ -21,8 +21,7 @@
     flex: 4;
 
     @media screen and (max-width: 992px) {
-        @include flex(flex-end, center);
-
+      @include flex(flex-end, center);
     }
 
     &__lists {
@@ -51,16 +50,21 @@
     &__icons {
       @include flex(unset, center);
 
-      li {
+      &-item {
         margin-right: 28px;
 
         @media screen and (max-width: 992px) {
-            display: none;
-          }
+          display: none;
+        }
 
         &:last-child {
           margin-right: 0;
           display: none;
+
+          button {
+            border: none;
+            background-color: transparent;
+          }
 
           @media screen and (max-width: 992px) {
             display: block;
@@ -70,3 +74,5 @@
     }
   }
 }
+
+
