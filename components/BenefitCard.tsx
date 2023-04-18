@@ -1,8 +1,8 @@
 import { Baloo_2 } from "next/font/google";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 
 interface BenefitCardProps {
-  icon: string;
+  icon: any;
   header: string;
   text: string;
 }
