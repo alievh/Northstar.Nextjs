@@ -18,7 +18,6 @@
     .product-image {
       @include flex(center, center);
 
-      
       @media screen and (max-width: 992px) {
         display: none;
       }
@@ -29,7 +28,7 @@
 
       @media screen and (max-width: 460px) {
         display: none;
-    }
+      }
     }
 
     .product-quantity-input {
@@ -43,16 +42,16 @@
       th {
         padding: 20px 0;
 
-        &:nth-child(2){
-            @media screen and (max-width: 992px) {
-                display: none;
-            }
+        &:nth-child(2) {
+          @media screen and (max-width: 992px) {
+            display: none;
+          }
         }
 
-        &:last-child{
-            @media screen and (max-width: 460px) {
-                display: none;
-            }
+        &:last-child {
+          @media screen and (max-width: 460px) {
+            display: none;
+          }
         }
       }
     }

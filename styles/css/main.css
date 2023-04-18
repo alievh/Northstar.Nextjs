@@ -974,6 +974,12 @@ nav {
   position: relative;
 }
 
+@media screen and (max-width: 500px) {
+  .product-detail-section .product-detail__image {
+    height: 400px;
+  }
+}
+
 .product-detail-section .product-detail__image span {
   display: flex;
   justify-content: center;
@@ -990,6 +996,12 @@ nav {
 
 .product-detail-section .product-detail__info {
   padding: 0 18px;
+}
+
+@media screen and (max-width: 992px) {
+  .product-detail-section .product-detail__info {
+    margin-top: 24px;
+  }
 }
 
 .product-detail-section .product-detail__info h4 {

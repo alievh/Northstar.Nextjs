@@ -10,6 +10,10 @@
       background-size: cover;
       position: relative;
 
+      @media screen and (max-width: 500px) {
+        height: 400px;
+      }
+
       span {
         @include flex(center, center);
         position: absolute;
@@ -25,6 +29,10 @@
 
     &__info {
       padding: 0 18px;
+
+      @media screen and (max-width: 992px) {
+        margin-top: 24px;
+      }
 
       h4 {
         font-size: 36px;
@@ -59,6 +67,7 @@
           display: flex;
 
           li {
+
             &:first-child {
               margin-right: 14px;
               span {
@@ -158,6 +167,7 @@
       background-color: #fbfbfb;
       border: 1px solid #ebebeb;
       padding: 18px 28px;
+      
       &.active {
         background-color: $white;
         font-weight: 700;
