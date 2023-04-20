@@ -4,6 +4,7 @@ import bg from "../assets/images/home_banner.jpg";
 import BuyBanner from "@/components/BuyBanner";
 import BenefitCard from "@/components/BenefitCard";
 import useFetch from "@/hooks/useFetch";
+import { Oval } from "react-loader-spinner";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
@@ -48,17 +49,32 @@ export default function Home() {
             <p>Recently added shirts!</p>
           </div>
           <div className="row">
-            {loading
-              ? "Fetching data"
-              : data.map((product: Product) => (
-                  <Product
-                    key={product.id}
-                    id={product.id}
-                    image={product.image}
-                    name={product.name}
-                    price={`$${product.discountPrice.toFixed(2)}`}
-                  />
-                ))}
+            {loading ? (
+              <div className="d-flex justify-content-center">
+                <Oval
+                  height={40}
+                  width={40}
+                  color="#000"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                  ariaLabel="oval-loading"
+                  secondaryColor="#0f0f0"
+                  strokeWidth={2}
+                  strokeWidthSecondary={2}
+                />{" "}
+              </div>
+            ) : (
+              data.map((product: Product) => (
+                <Product
+                  key={product.id}
+                  id={product.id}
+                  image={product.image}
+                  name={product.name}
+                  price={`$${product.discountPrice.toFixed(2)}`}
+                />
+              ))
+            )}
           </div>
         </div>
       </section>
@@ -167,17 +183,32 @@ export default function Home() {
             <p>Browse our top-selling products</p>
           </div>
           <div className="row">
-            {loading
-              ? "Fetching data"
-              : bestSellers.map((product: Product) => (
-                  <Product
-                    key={product.id}
-                    id={product.id}
-                    image={product.image}
-                    name={product.name}
-                    price={`$${product.discountPrice.toFixed(2)}`}
-                  />
-                ))}
+            {loading ? (
+              <div className="d-flex justify-content-center mb-5">
+                <Oval
+                  height={40}
+                  width={40}
+                  color="#000"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                  ariaLabel="oval-loading"
+                  secondaryColor="#0f0f0"
+                  strokeWidth={2}
+                  strokeWidthSecondary={2}
+                />{" "}
+              </div>
+            ) : (
+              bestSellers.map((product: Product) => (
+                <Product
+                  key={product.id}
+                  id={product.id}
+                  image={product.image}
+                  name={product.name}
+                  price={`$${product.discountPrice.toFixed(2)}`}
+                />
+              ))
+            )}
           </div>
           <div className="row justify-content-center">
             <a className="topsellers-section__shop-now" href="#">
