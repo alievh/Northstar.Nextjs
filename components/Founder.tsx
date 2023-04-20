@@ -17,6 +17,7 @@ const Founder: FC<FounderProps> = ({ image, fullname }) => {
           src={require(`../assets/images/${image}`)}
           alt="Founder"
           style={{ width: "100%", objectFit: "cover" }}
+          quality={100}
         />
         <a className={arimo.className} href="#">
           {fullname}

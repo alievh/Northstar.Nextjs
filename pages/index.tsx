@@ -3,10 +3,29 @@ import { Arimo } from "next/font/google";
 import bg from "../assets/images/home_banner.jpg";
 import BuyBanner from "@/components/BuyBanner";
 import BenefitCard from "@/components/BenefitCard";
+import useFetch from "@/hooks/useFetch";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  discountPrice: number;
+  shorDescription: string;
+  longDescription: string;
+  categories: string[];
+  tags: string[];
+  rate: number;
+  image: string;
+};
+
 export default function Home() {
+  // CSR Fetch
+  const { data, loading, error } = useFetch("http://localhost:3100/product");
+
+  const bestSellers = data.filter((product: Product) => product.rate > 4);
+
   return (
     <main>
       <section className="home-banner-section">
@@ -29,42 +48,17 @@ export default function Home() {
             <p>Recently added shirts!</p>
           </div>
           <div className="row">
-            <Product
-              image="product1.jpg"
-              name="Plain White Shirt"
-              price="$29.00"
-            />
-            <Product image="product2.jpg" name="Denim Jacket" price="$69.00" />
-            <Product
-              image="product3.jpg"
-              name="Black Polo Shirt"
-              price="$49.00"
-            />
-            <Product
-              image="product4.jpg"
-              name="Blue Sweatshirt"
-              price="$79.00"
-            />
-            <Product
-              image="product5.jpg"
-              name="Blue Plain Shirt"
-              price="$49.00"
-            />
-            <Product
-              image="product6.jpg"
-              name="Dark Blue Shirt"
-              price="$89.00"
-            />
-            <Product
-              image="product7.jpg"
-              name="Outcast T Shirt"
-              price="$19.00"
-            />
-            <Product
-              image="product8.jpg"
-              name="Polo Plain Shirt"
-              price="$29.00"
-            />
+            {loading
+              ? "Fetching data"
+              : data.map((product: Product) => (
+                  <Product
+                    key={product.id}
+                    id={product.id}
+                    image={product.image}
+                    name={product.name}
+                    price={`$${product.discountPrice.toFixed(2)}`}
+                  />
+                ))}
           </div>
         </div>
       </section>
@@ -173,26 +167,17 @@ export default function Home() {
             <p>Browse our top-selling products</p>
           </div>
           <div className="row">
-            <Product
-              image="TopSeller1.jpg"
-              name="Plain White Shirt"
-              price="$29.00"
-            />
-            <Product
-              image="TopSeller2.jpg"
-              name="Denim Jacket"
-              price="$69.00"
-            />
-            <Product
-              image="TopSeller3.jpg"
-              name="Black Polo Shirt"
-              price="$49.00"
-            />
-            <Product
-              image="TopSeller4.jpg"
-              name="Blue Sweatshirt"
-              price="$79.00"
-            />
+            {loading
+              ? "Fetching data"
+              : bestSellers.map((product: Product) => (
+                  <Product
+                    key={product.id}
+                    id={product.id}
+                    image={product.image}
+                    name={product.name}
+                    price={`$${product.discountPrice.toFixed(2)}`}
+                  />
+                ))}
           </div>
           <div className="row justify-content-center">
             <a className="topsellers-section__shop-now" href="#">

@@ -1,5 +1,4 @@
 import { FC, useState } from "react";
-import { useRouter } from "next/router";
 import ExpandNavigation from "@/components/ExpandNavigation";
 import productImage from "../../assets/images/product_detail_man.jpg";
 import { Arimo, Lato, Source_Sans_Pro } from "next/font/google";
@@ -7,17 +6,46 @@ import { AiFillStar } from "react-icons/ai";
 import { BsWhatsapp, BsInstagram, BsTwitter } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { GetServerSideProps } from "next";
+import axios from "axios";
+import Image from "next/image";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 const sourceSanPro = Source_Sans_Pro({ weight: "400", subsets: ["latin"] });
 const lato = Lato({ weight: "400", subsets: ["latin"] });
-interface singleProductProps {}
 
-const SingleProduct: FC<singleProductProps> = ({}) => {
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  discountPrice: number;
+  shorDescription: string;
+  longDescription: string;
+  categories: string[];
+  tags: string[];
+  rate: number;
+  image: string;
+};
+
+interface singleProductProps {
+  data: Product;
+}
+
+// SSR Fetching
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const res = await axios(`http://localhost:3100/product/${context.query.id}`);
+  const data = res.data;
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const SingleProduct: FC<singleProductProps> = ({ data }) => {
   const [isDescriptionActive, setIsDescriptionActive] = useState(true);
   const [isReviewsActive, setIsReviewsActive] = useState(false);
-  const router = useRouter();
-  const { id } = router.query;
 
   const activateDescription = () => {
     setIsDescriptionActive(true);
@@ -35,12 +63,13 @@ const SingleProduct: FC<singleProductProps> = ({}) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
-              <div
-                className="product-detail__image"
-                style={{
-                  backgroundImage: `url(${productImage.src})`,
-                }}
-              >
+              <div className="product-detail__image">
+                <Image
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  src={require(`../../assets/images/${data.image}`)}
+                  quality={100}
+                  alt="product image"
+                />
                 <span>-24%</span>
               </div>
             </div>
@@ -52,7 +81,7 @@ const SingleProduct: FC<singleProductProps> = ({}) => {
                   </ul>
                 </div>
                 <div className="product-title">
-                  <h4 className={arimo.className}>Plain T Shirt</h4>
+                  <h4 className={arimo.className}>{data.name}</h4>
                 </div>
                 <div className="product-rate">
                   <ul>
@@ -81,19 +110,19 @@ const SingleProduct: FC<singleProductProps> = ({}) => {
                 <div className="product-price">
                   <ul>
                     <li>
-                      <span className={lato.className}>$69.00</span>
+                      <span className={lato.className}>
+                        ${data.price.toFixed(2)}
+                      </span>
                     </li>
                     <li>
-                      <span className={lato.className}>$49.00</span>
+                      <span className={lato.className}>
+                        ${data.discountPrice.toFixed(2)}
+                      </span>
                     </li>
                   </ul>
                 </div>
                 <div className="product-description">
-                  <p>
-                    A classic t-shirt never goes out of style. This is our most
-                    premium collection of shirt. This plain white shirt is made
-                    up of pure cotton and has a premium finish.
-                  </p>
+                  <p>{data ? data.shorDescription : null}</p>
                 </div>
 
                 <div className="product-size">
@@ -114,12 +143,22 @@ const SingleProduct: FC<singleProductProps> = ({}) => {
                   <ul>
                     <li>
                       <span className={lato.className}>
-                        Category: Men, Polo, Casual
+                        Category:{" "}
+                        {data
+                          ? data.categories.map((category) => (
+                              <span key={category}>{category} </span>
+                            ))
+                          : null}
                       </span>
                     </li>
                     <li>
                       <span className={lato.className}>
-                        Tags: Modern, Design, cotton
+                        Tags:{" "}
+                        {data
+                          ? data.tags.map((tag) => (
+                              <span key={tag}>{tag} </span>
+                            ))
+                          : null}
                       </span>
                     </li>
                   </ul>
@@ -192,25 +231,9 @@ const SingleProduct: FC<singleProductProps> = ({}) => {
               </ul>
               <div className="product-description__content">
                 {isDescriptionActive ? (
-                  <p className={lato.className}>
-                    A key objective is engaging digital marketing customers and
-                    allowing them to interact with the brand through servicing
-                    and delivery of digital media. Information is easy to access
-                    at a fast rate through the use of digital communications.
-                    <br />
-                    <br />
-                    Users with access to the Internet can use many digital
-                    mediums, such as Facebook, YouTube, Forums, and Email etc.
-                    Through Digital communications it creates a
-                    Multi-communication channel where information can be quickly
-                    exchanged around the world by anyone without any regard to
-                    whom they are.[28] Social segregation plays no part through
-                    social mediums due to lack of face to face communication and
-                    information being wide spread instead to a selective
-                    audience.
-                  </p>
+                  <p className={lato.className}>{data.longDescription}</p>
                 ) : (
-                  <p className={lato.className}>Salam</p>
+                  <p className={lato.className}> {data.shorDescription}</p>
                 )}
               </div>
             </div>

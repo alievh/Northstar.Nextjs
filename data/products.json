@@ -1,0 +1,100 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Plain White Shirt",
+      "price": 39.0,
+      "discountPrice": 29.0,
+      "shorDescription": "A classic t-shirt never goes out of style. This is our most premium collection of shirt. This plain white shirt is made up of pure cotton and has a premium finish.",
+      "longDescription": "A key objective is engaging digital marketing customers and allowing them to interact with the brand through servicing and delivery of digital media. Information is easy to access at a fast rate through the use of digital communications. Users with access to the Internet can use many digital mediums, such as Facebook, YouTube, Forums, and Email etc. Through Digital communications it creates a Multi-communication channel where information can be quickly exchanged around the world by anyone without any regard to whom they are.[28] Social segregation plays no part through social mediums due to lack of face to face communication and information being wide spread instead to a selective audience.",
+      "categories": ["Men", "Polo", "Casual"],
+      "tags": ["Modern", "Design", "Old"],
+      "rate": 4,
+      "image": "product1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Denim Jacket",
+      "price": 89.0,
+      "discountPrice": 69.0,
+      "shorDescription": "A classic t-shirt never goes out of style. This is our most premium collection of shirt. This plain white shirt is made up of pure cotton and has a premium finish.",
+      "longDescription": "A key objective is engaging digital marketing customers and allowing them to interact with the brand through servicing and delivery of digital media. Information is easy to access at a fast rate through the use of digital communications. Users with access to the Internet can use many digital mediums, such as Facebook, YouTube, Forums, and Email etc. Through Digital communications it creates a Multi-communication channel where information can be quickly exchanged around the world by anyone without any regard to whom they are.[28] Social segregation plays no part through social mediums due to lack of face to face communication and information being wide spread instead to a selective audience.",
+      "categories": ["Men", "Polo", "Casual"],
+      "tags": ["Modern", "Design", "Some"],
+      "rate": 5,
+      "image": "product2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Black Polo Shirt",
+      "price": 59.0,
+      "discountPrice": 49.0,
+      "shorDescription": "A classic t-shirt never goes out of style. This is our most premium collection of shirt. This plain white shirt is made up of pure cotton and has a premium finish.",
+      "longDescription": "A key objective is engaging digital marketing customers and allowing them to interact with the brand through servicing and delivery of digital media. Information is easy to access at a fast rate through the use of digital communications. Users with access to the Internet can use many digital mediums, such as Facebook, YouTube, Forums, and Email etc. Through Digital communications it creates a Multi-communication channel where information can be quickly exchanged around the world by anyone without any regard to whom they are.[28] Social segregation plays no part through social mediums due to lack of face to face communication and information being wide spread instead to a selective audience.",
+      "categories": ["Men", "Polo", "Casual"],
+      "tags": ["Modern", "Design", "cotton"],
+      "rate": 4,
+      "image": "product3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Blue Sweatshirt",
+      "price": 99.0,
+      "discountPrice": 79.0,
+      "shorDescription": "A classic t-shirt never goes out of style. This is our most premium collection of shirt. This plain white shirt is made up of pure cotton and has a premium finish.",
+      "longDescription": "A key objective is engaging digital marketing customers and allowing them to interact with the brand through servicing and delivery of digital media. Information is easy to access at a fast rate through the use of digital communications. Users with access to the Internet can use many digital mediums, such as Facebook, YouTube, Forums, and Email etc. Through Digital communications it creates a Multi-communication channel where information can be quickly exchanged around the world by anyone without any regard to whom they are.[28] Social segregation plays no part through social mediums due to lack of face to face communication and information being wide spread instead to a selective audience.",
+      "categories": ["Men", "Polo", "Casual"],
+      "tags": ["Modern", "Design", "cotton"],
+      "rate": 5,
+      "image": "product4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Blue Plain Shirt",
+      "price": 79.0,
+      "discountPrice": 49.0,
+      "shorDescription": "A classic t-shirt never goes out of style. This is our most premium collection of shirt. This plain white shirt is made up of pure cotton and has a premium finish.",
+      "longDescription": "A key objective is engaging digital marketing customers and allowing them to interact with the brand through servicing and delivery of digital media. Information is easy to access at a fast rate through the use of digital communications. Users with access to the Internet can use many digital mediums, such as Facebook, YouTube, Forums, and Email etc. Through Digital communications it creates a Multi-communication channel where information can be quickly exchanged around the world by anyone without any regard to whom they are.[28] Social segregation plays no part through social mediums due to lack of face to face communication and information being wide spread instead to a selective audience.",
+      "categories": ["Men", "Polo", "Casual"],
+      "tags": ["Modern", "Design", "cotton"],
+      "rate": 5,
+      "image": "product5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dark Blue Shirt",
+      "price": 109.0,
+      "discountPrice": 89.0,
+      "shorDescription": "A classic t-shirt never goes out of style. This is our most premium collection of shirt. This plain white shirt is made up of pure cotton and has a premium finish.",
+      "longDescription": "A key objective is engaging digital marketing customers and allowing them to interact with the brand through servicing and delivery of digital media. Information is easy to access at a fast rate through the use of digital communications. Users with access to the Internet can use many digital mediums, such as Facebook, YouTube, Forums, and Email etc. Through Digital communications it creates a Multi-communication channel where information can be quickly exchanged around the world by anyone without any regard to whom they are.[28] Social segregation plays no part through social mediums due to lack of face to face communication and information being wide spread instead to a selective audience.",
+      "categories": ["Men", "Polo", "Casual"],
+      "tags": ["Modern", "Design", "cotton"],
+      "rate": 3,
+      "image": "product6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Outcast T Shirt",
+      "price": 39.0,
+      "discountPrice": 19.0,
+      "shorDescription": "A classic t-shirt never goes out of style. This is our most premium collection of shirt. This plain white shirt is made up of pure cotton and has a premium finish.",
+      "longDescription": "A key objective is engaging digital marketing customers and allowing them to interact with the brand through servicing and delivery of digital media. Information is easy to access at a fast rate through the use of digital communications. Users with access to the Internet can use many digital mediums, such as Facebook, YouTube, Forums, and Email etc. Through Digital communications it creates a Multi-communication channel where information can be quickly exchanged around the world by anyone without any regard to whom they are.[28] Social segregation plays no part through social mediums due to lack of face to face communication and information being wide spread instead to a selective audience.",
+      "categories": ["Men", "Polo", "Casual"],
+      "tags": ["Modern", "New", "cotton"],
+      "rate": 5,
+      "image": "product7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Polo Plain Shirt",
+      "price": 69.0,
+      "discountPrice": 29.0,
+      "shorDescription": "A classic t-shirt never goes out of style. This is our most premium collection of shirt. This plain white shirt is made up of pure cotton and has a premium finish.",
+      "longDescription": "A key objective is engaging digital marketing customers and allowing them to interact with the brand through servicing and delivery of digital media. Information is easy to access at a fast rate through the use of digital communications. Users with access to the Internet can use many digital mediums, such as Facebook, YouTube, Forums, and Email etc. Through Digital communications it creates a Multi-communication channel where information can be quickly exchanged around the world by anyone without any regard to whom they are.[28] Social segregation plays no part through social mediums due to lack of face to face communication and information being wide spread instead to a selective audience.",
+      "categories": ["Men", "Polo", "Casual"],
+      "tags": ["Modern", "Design", "cotton"],
+      "rate": 2,
+      "image": "product8.jpg"
+    }
+  ]
+}

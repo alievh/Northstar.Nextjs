@@ -20,6 +20,7 @@ const Testimonial: FC<TestimonialProps> = ({image, text, username}) => {
           width={"210"}
           height={"210"}
           alt="testimonial picture"
+          quality={100}
           style={{ marginRight: "48px" }}
         />
       </div>
