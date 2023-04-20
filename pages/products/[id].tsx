@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import ExpandNavigation from "@/components/ExpandNavigation";
-import productImage from "../../assets/images/product_detail_man.jpg";
 import { Arimo, Lato, Source_Sans_Pro } from "next/font/google";
 import { AiFillStar } from "react-icons/ai";
 import { BsWhatsapp, BsInstagram, BsTwitter } from "react-icons/bs";
@@ -33,7 +32,12 @@ interface singleProductProps {
 
 // SSR Fetching
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await axios(`http://localhost:3100/product/${context.params.id}`);
+  let res;
+  if(context.params != undefined) {
+    res = await axios(`http://localhost:3100/product/${context.params.id}`);
+  }else {
+    res = await axios(`http://localhost:3100/product/${context.query.id}`);
+  }
   const data = res.data;
 
   return {
