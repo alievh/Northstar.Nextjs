@@ -33,7 +33,8 @@ interface singleProductProps {
 
 // SSR Fetching
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await axios(`http://localhost:3100/products/${context.query.id}`);
+  const {id} = context.query;
+  const res = await axios(`http://localhost:3100/products/${id}`);
   const data = res.data;
 
   return {
