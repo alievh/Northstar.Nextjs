@@ -1,4 +1,6 @@
 import ExpandNavigation from "@/components/ExpandNavigation";
+import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
 import { Arimo } from "next/font/google";
 import { FC } from "react";
 
@@ -24,13 +26,13 @@ const Checkout: FC<checkoutProps> = ({}) => {
                   <label htmlFor="fullname">
                     Full Name<span>*</span>
                   </label>
-                  <input id="fullname" required={true} name="fullname" />
+                  <Input id="fullname" required={true} name="fullname" />
                 </div>
                 <div className="form-street">
                   <label htmlFor="street">
                     Street Address<span>*</span>
                   </label>
-                  <input
+                  <Input
                     id="street"
                     placeholder="House number and street name"
                     required={true}
@@ -41,19 +43,19 @@ const Checkout: FC<checkoutProps> = ({}) => {
                   <label htmlFor="city">
                     Town / City<span>*</span>
                   </label>
-                  <input id="city" required={true} name="city" />
+                  <Input id="city" required={true} name="city" />
                 </div>
                 <div className="form-phone">
                   <label htmlFor="phone">
                     Phone<span>*</span>
                   </label>
-                  <input id="phone" required={true} name="phone" />
+                  <Input id="phone" required={true} name="phone" />
                 </div>
                 <div className="form-email">
                   <label htmlFor="email">
                     Email Address<span>*</span>
                   </label>
-                  <input id="email" required={true} name="email" />
+                  <Input id="email" required={true} name="email" />
                 </div>
               </form>
             </div>
@@ -103,7 +105,7 @@ const Checkout: FC<checkoutProps> = ({}) => {
                   </p>
                 </div>
                 <div className="place-order-button">
-                  <button>Place Order</button>
+                  <Button type="button">Place Order</Button>
                 </div>
               </div>
             </div>

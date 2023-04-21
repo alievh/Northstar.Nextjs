@@ -1,4 +1,6 @@
 import ExpandNavigation from "@/components/ExpandNavigation";
+import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
 import { Arimo, Baloo_2 } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,9 +35,9 @@ const Cart: FC<cartProps> = ({}) => {
             <tbody>
               <tr>
                 <td scope="row">
-                  <button className="remove-button" type="button">
+                  <Button className="remove-button" type="button">
                     x
-                  </button>
+                  </Button>
                 </td>
 
                 <td className="product-image">
@@ -51,7 +53,7 @@ const Cart: FC<cartProps> = ({}) => {
                 </td>
                 <td className="product-price">$59.00</td>
                 <td>
-                  <input className="product-quantity-input" type="number" defaultValue={1} />
+                  <Input className="product-quantity-input" type="number" defaultValue={1} />
                 </td>
                 <td>$59.00</td>
               </tr>

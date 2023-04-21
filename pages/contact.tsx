@@ -2,6 +2,7 @@ import { FC } from "react";
 import BannerImage from "../assets/images/contact_banner.jpg";
 import PageHeadBanner from "@/components/PageHeadBanner";
 import { Arimo } from "next/font/google";
+import Input from "@/components/ui/Input";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
@@ -29,11 +30,11 @@ const Contact: FC<contactProps> = ({}) => {
                   <div className="row w-100">
                     <div className="form-name col-lg-6">
                       <label htmlFor="name">Name</label>
-                      <input name="name" id="name" />
+                      <Input name="name" id="name" />
                     </div>
                     <div className="form-email col-lg-6">
                       <label htmlFor="name">Email</label>
-                      <input name="name" id="name" />
+                      <Input name="name" id="name" />
                     </div>
                   </div>
                 </div>

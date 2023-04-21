@@ -2,6 +2,8 @@ import { FC } from "react";
 import { Arimo } from "next/font/google";
 import { AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
+import Button from "./ui/Button";
+import Input from "./ui/Input";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
@@ -69,10 +71,10 @@ const Footer: FC<FooterProps> = ({}) => {
           <div className="col-lg-3 col-md-6">
             <h4 className={arimo.className}>Get In The Know</h4>
             <form>
-              <input placeholder="Enter email" />
-              <button type="submit">
+              <Input placeholder="Enter email" />
+              <Button type="submit">
                 <AiOutlineRight />
-              </button>
+              </Button>
             </form>
           </div>
         </div>

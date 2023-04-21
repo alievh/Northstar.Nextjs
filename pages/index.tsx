@@ -23,7 +23,7 @@ type Product = {
 
 export default function Home() {
   // CSR Fetch
-  const { data, loading, error } = useFetch("http://localhost:3100/product");
+  const { data, loading, error } = useFetch("http://localhost:3100/products");
 
   const bestSellers = data.filter((product: Product) => product.rate > 4);
 

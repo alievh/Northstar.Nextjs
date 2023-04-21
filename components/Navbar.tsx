@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FC, useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import { Router } from "next/router";
+import Button from "./ui/Button";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
@@ -98,7 +99,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
               </Link>
             </li>
             <li className="navigation__icons-item">
-              <button onClick={burgerMenuHandler} type="button">
+              <Button onClick={burgerMenuHandler} type="button">
                 <svg
                   width="24"
                   height="25"
@@ -128,7 +129,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
+              </Button>
               <BurgerMenu className={isBurgerMenuActive ? "burger-menu active" : "burger-menu"} />
             </li>
           </ul>

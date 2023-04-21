@@ -8,6 +8,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { GetServerSideProps } from "next";
 import axios from "axios";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 const sourceSanPro = Source_Sans_Pro({ weight: "400", subsets: ["latin"] });
@@ -32,12 +33,7 @@ interface singleProductProps {
 
 // SSR Fetching
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  let res;
-  if(context.params != undefined) {
-    res = await axios(`http://localhost:3100/product/${context.params.id}`);
-  }else {
-    res = await axios(`http://localhost:3100/product/${context.query.id}`);
-  }
+  const res = await axios(`http://localhost:3100/products/${context.query.id}`);
   const data = res.data;
 
   return {
@@ -140,7 +136,7 @@ const SingleProduct: FC<singleProductProps> = ({ data }) => {
                 </div>
 
                 <div className="product-add-cart">
-                  <button type="button">Add To Cart</button>
+                  <Button type="button">Add To Cart</Button>
                 </div>
 
                 <div className="product-category">
@@ -207,7 +203,7 @@ const SingleProduct: FC<singleProductProps> = ({ data }) => {
             <div className="col-lg-12">
               <ul>
                 <li>
-                  <button
+                  <Button
                     type="button"
                     className={
                       isDescriptionActive
@@ -217,10 +213,10 @@ const SingleProduct: FC<singleProductProps> = ({ data }) => {
                     onClick={activateDescription}
                   >
                     Description
-                  </button>
+                  </Button>
                 </li>
                 <li>
-                  <button
+                  <Button
                     type="button"
                     className={
                       isReviewsActive
@@ -230,7 +226,7 @@ const SingleProduct: FC<singleProductProps> = ({ data }) => {
                     onClick={activateReviews}
                   >
                     Reviews (0)
-                  </button>
+                  </Button>
                 </li>
               </ul>
               <div className="product-description__content">
