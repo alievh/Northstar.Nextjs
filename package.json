@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"json-server ./data/products.json --port=3100\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -17,6 +17,7 @@
     "bootstrap": "^5.2.3",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "json-server": "^0.17.3",
     "next": "13.3.0",
     "nextjs-progressbar": "^0.0.16",
     "react": "18.2.0",
@@ -26,6 +27,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "concurrently": "^8.0.1",
     "sass": "^1.62.0"
   }
 }
