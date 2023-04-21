@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"next dev\" \"json-server ./data/products.json --port=3100\"",
-    "build": "concurrently \"next build\" \"json-server ./data/products.json --port=3100\"",
+    "build": "next build",
     "start": "concurrently \"next start\" \"json-server ./data/products.json --port=3100\"",
     "lint": "next lint",
     "watch": "json-server ./data/products.json --port=3100"
@@ -24,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-loader-spinner": "^5.3.4",
+    "sharp": "^0.32.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {
