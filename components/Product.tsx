@@ -16,13 +16,17 @@ const Product: FC<ProductProps> = ({ id,image, name, price }) => {
   return (
     <div className="col-xl-3 col-lg-4 col-md-6 product-container">
       <Link href={`products/${id}`}>
+        <div style={{ margin: 'auto', maxWidth: '100%' }}>
         <Image
-          src={require(`../assets/images/${image}`)}
+          src={`/images/${image}`}
           alt="Product picture"
+          width={1920}
+          height={350}
           quality={100}
           sizes="300px"
-          style={{width: "100%", objectFit: "cover"}}
+          style={{width: "100%", objectFit: "cover", }}
         />
+        </div>
       </Link>
       <Link href={`products/${id}`}>
         <h4 className={baloo.className}>{name}</h4>

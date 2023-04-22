@@ -13,12 +13,16 @@ const Founder: FC<FounderProps> = ({ image, fullname }) => {
   return (
     <div className="col-lg-3 col-md-4 col-sm-6">
       <div className="founder">
-        <Image
-          src={require(`../assets/images/${image}`)}
-          alt="Founder"
-          style={{ width: "100%", objectFit: "cover" }}
-          quality={100}
-        />
+        <div style={{ margin: "auto", maxWidth: "100%" }}>
+          <Image
+            src={`/images/${image}`}
+            width={295}
+            height={280}
+            alt="Founder"
+            style={{ width: "100%", objectFit: "cover" }}
+            quality={100}
+          />
+        </div>
         <a className={arimo.className} href="#">
           {fullname}
         </a>

@@ -83,6 +83,17 @@
       }
     }
 
+    .form-button {
+      margin-top: 24px;
+
+      button {
+        padding: 18px 36px;
+        color: $white;
+        text-transform: uppercase;
+        background-color: #024E82;
+      }
+    }
+
     label {
       margin-bottom: 12px;
     }

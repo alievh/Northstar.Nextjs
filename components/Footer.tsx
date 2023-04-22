@@ -84,10 +84,34 @@ const Footer: FC<FooterProps> = ({}) => {
             <p>Privacy Policy Terms & Conditions</p>
           </div>
           <div className="footer-privacy__payment-methods">
-            <Image src={require("../assets/images/footer1.jpeg")} sizes="100px" alt="payment method" />
-            <Image src={require("../assets/images/footer2.jpeg")} sizes="100px" alt="payment method" />
-            <Image src={require("../assets/images/footer3.jpeg")} sizes="100px" alt="payment method" />
-            <Image src={require("../assets/images/footer4.jpeg")} sizes="100px" alt="payment method" />
+            <Image
+              src={"/images/footer1.jpeg"}
+              width={63}
+              height={39}
+              sizes="100px"
+              alt="payment method"
+            />
+            <Image
+              src={"/images/footer2.jpeg"}
+              width={63}
+              height={39}
+              sizes="100px"
+              alt="payment method"
+            />
+            <Image
+              src={"/images/footer3.jpeg"}
+              width={63}
+              height={39}
+              sizes="100px"
+              alt="payment method"
+            />
+            <Image
+              src={"/images/footer4.jpeg"}
+              width={63}
+              height={39}
+              sizes="100px"
+              alt="payment method"
+            />
           </div>
         </div>
       </div>
