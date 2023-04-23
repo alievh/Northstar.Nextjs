@@ -44,7 +44,7 @@ const CartProductsSection: FC<CartProductsSectionProps> = ({ basket }) => {
           <tbody>
             {basket.products !== undefined && basket.products !== null
               ? basket.products.map((product: BasketItemType) => (
-                  <tr>
+                  <tr key={product.id}>
                     <td scope="row">
                       <Button
                         onClick={() => removeFromBasketHandler(product.id)}

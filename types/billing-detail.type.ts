@@ -1,7 +1,7 @@
 export type BillingDetailType = {
-  fullname: string;
-  street: string;
-  city: string;
-  phone: string;
-  email: string;
+  fullname: string | undefined;
+  street: string | undefined;
+  city: string | undefined;
+  phone: string | undefined;
+  email: string | undefined;
 };

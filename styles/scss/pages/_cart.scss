@@ -99,3 +99,17 @@
     text-transform: uppercase;
   }
 }
+
+.cart-no-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #FBFBFB;
+  margin: 40px 0;
+  border: 1px solid $footer-border;
+
+  p {
+    text-transform: uppercase;
+  }
+}

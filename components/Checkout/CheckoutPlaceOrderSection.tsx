@@ -17,7 +17,7 @@ const CheckoutPlaceOrderSection: FC<CheckoutPlaceOrderSectionProps> = ({}) => {
                 </p>
               </div>
               <div className="place-order-button">
-                <Button type="button">Place Order</Button>
+                <Button type="submit" form="checkout-form" >Place Order</Button>
               </div>
             </div>
           </div>

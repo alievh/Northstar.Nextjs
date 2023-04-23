@@ -16,7 +16,6 @@ const Cart: FC<cartProps> = ({}) => {
   const basket: BasketType = useSelector<RootState, BasketType>(
     (state: any) => state.BasketSlice.basket
   );
-  console.log(basket);
 
   useEffect(() => {
     GetBasket(dispatch);
@@ -30,8 +29,18 @@ const Cart: FC<cartProps> = ({}) => {
       </Head>
       <main>
         <CartExpandNavigationSection />
-        <CartProductsSection basket={basket} />
-        <CartTotalsSection totalPrice={basket.total} />
+        {Object.keys(basket).length !== 0 && basket.count !== 0 ? (
+          <>
+            <CartProductsSection basket={basket} />
+            <CartTotalsSection totalPrice={basket.total} />
+          </>
+        ) : (
+          <div className="container">
+            <div className="cart-no-item">
+              <p>Add item to cart</p>
+            </div>
+          </div>
+        )}
       </main>
     </>
   );

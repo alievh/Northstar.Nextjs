@@ -19,7 +19,6 @@ const BasketSlice = createSlice({
 export function GetBasket(dispatch: any) {
   const basketJson = localStorage.getItem("basket");
 
-  console.log(basketJson);
   if (basketJson !== null) {
     dispatch(setBasket(JSON.parse(basketJson)));
   }
@@ -102,12 +101,15 @@ export function ChangeQuantityBasket(
         return accumulator + object.discountPrice * object.quantity;
       }, 0);
 
-      console.log(basket);
-
       localStorage.setItem("basket", JSON.stringify(basket));
       dispatch(setBasket(basket));
     }
   }
+}
+
+export function ClearBasket(dispatch: any) {
+  localStorage.removeItem("basket");
+  dispatch(setBasket({}));
 }
 
 export const { setBasket } = BasketSlice.actions;

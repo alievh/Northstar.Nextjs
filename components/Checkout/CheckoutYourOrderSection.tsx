@@ -1,11 +1,17 @@
+import { BasketType } from "@/types/basket.type";
+import { BasketItemType } from "@/types/basketItem.type";
 import { Arimo } from "next/font/google";
 import { FC } from "react";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
-interface CheckoutYourOrderSectionProps {}
+interface CheckoutYourOrderSectionProps {
+  basket: BasketType;
+}
 
-const CheckoutYourOrderSection: FC<CheckoutYourOrderSectionProps> = ({}) => {
+const CheckoutYourOrderSection: FC<CheckoutYourOrderSectionProps> = ({
+  basket,
+}) => {
   return (
     <section className="your-order-section">
       <div className="container">
@@ -17,21 +23,53 @@ const CheckoutYourOrderSection: FC<CheckoutYourOrderSectionProps> = ({}) => {
                 <tr className={arimo.className}>
                   <th scope="col">Product</th>
                   <th scope="col">Total</th>
+                  {basket.total !== null && basket.total !== undefined ? (
+                    <th scope="col">Quantity</th>
+                  ) : null}
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Plain White Shirt</td>
-                  <td>$59.00</td>
-                </tr>
-                <tr>
-                  <td>Subtotal</td>
-                  <td>$59.00</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>$59.00</td>
-                </tr>
+                {basket.products !== undefined && basket.products !== null
+                  ? basket.products.map((product: BasketItemType) => (
+                      <tr key={product.id}>
+                        <td>{product.name}</td>
+                        <td>
+                          $
+                          {(product.discountPrice * product.quantity).toFixed(
+                            2
+                          )}
+                        </td>
+                        <td>x{product.quantity}</td>
+                      </tr>
+                    ))
+                  : null}
+                {basket.total !== null && basket.total !== undefined ? (
+                  <>
+                    <tr>
+                      <td>Subtotal</td>
+                      <td>${basket.total.toFixed(2)}</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>${basket.total.toFixed(2)}</td>
+                      <td></td>
+                    </tr>
+                  </>
+                ) : (
+                  <>
+                    <tr>
+                      <td>Subtotal</td>
+                      <td>$0</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>$0</td>
+                      <td></td>
+                    </tr>
+                  </>
+                )}
               </tbody>
             </table>
           </div>

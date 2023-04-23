@@ -11,6 +11,7 @@ import { Arimo, Lato, Source_Sans_Pro } from "next/font/google";
 import { BasketItemType } from "@/types/basketItem.type";
 import { AddToBasket } from "@/store/Basket/BasketSlice";
 import { useDispatch } from "react-redux";
+import Notiflix from "notiflix";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 const sourceSanPro = Source_Sans_Pro({ weight: "400", subsets: ["latin"] });
@@ -35,11 +36,15 @@ const ProductDetailSection: FC<ProductDetailSectionProps> = ({ data }) => {
       name: data.name,
       image: data.image,
       discountPrice: data.discountPrice,
-      quantity: 1
-    }
+      quantity: 1,
+    };
 
     AddToBasket(dispatch, basket);
-  }
+    Notiflix.Notify.success("Product added to cart", {
+      ID: "MKA",
+      timeout: 1500,
+    });
+  };
 
   return (
     <section className="product-detail-section">
@@ -124,10 +129,7 @@ const ProductDetailSection: FC<ProductDetailSectionProps> = ({ data }) => {
               </div>
 
               <div className="product-add-cart">
-                <Button
-                  onClick={() => addToBasketHandler(data)}
-                  type="button"
-                >
+                <Button onClick={() => addToBasketHandler(data)} type="button">
                   Add To Cart
                 </Button>
               </div>
