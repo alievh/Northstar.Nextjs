@@ -8,26 +8,38 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { ProductType } from "@/types/product.type";
 import { Arimo, Lato, Source_Sans_Pro } from "next/font/google";
+import { BasketItemType } from "@/types/basketItem.type";
+import { AddToBasket } from "@/store/Basket/BasketSlice";
+import { useDispatch } from "react-redux";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 const sourceSanPro = Source_Sans_Pro({ weight: "400", subsets: ["latin"] });
 const lato = Lato({ weight: "400", subsets: ["latin"] });
-
-const addHandler = (product: ProductType, size: string) => {
-  
-};
 
 interface ProductDetailSectionProps {
   data: ProductType;
 }
 
 const ProductDetailSection: FC<ProductDetailSectionProps> = ({ data }) => {
+  const dispatch = useDispatch();
   const [selectedSize, setSelectedSize] = useState<string>("L");
 
   const sizeHandler = (event: ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
     setSelectedSize(value);
   };
+
+  const addToBasketHandler = (data: ProductType) => {
+    const basket: BasketItemType = {
+      id: data.id,
+      name: data.name,
+      image: data.image,
+      discountPrice: data.discountPrice,
+      quantity: 1
+    }
+
+    AddToBasket(dispatch, basket);
+  }
 
   return (
     <section className="product-detail-section">
@@ -113,7 +125,7 @@ const ProductDetailSection: FC<ProductDetailSectionProps> = ({ data }) => {
 
               <div className="product-add-cart">
                 <Button
-                  onClick={() => addHandler(data, selectedSize)}
+                  onClick={() => addToBasketHandler(data)}
                   type="button"
                 >
                   Add To Cart

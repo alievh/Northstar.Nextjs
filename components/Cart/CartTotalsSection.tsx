@@ -5,9 +5,11 @@ import { FC } from "react";
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 const baloo = Baloo_2({ weight: "700", subsets: ["latin"] });
 
-interface CartTotalsSectionProps {}
+interface CartTotalsSectionProps {
+  totalPrice: number;
+}
 
-const CartTotalsSection: FC<CartTotalsSectionProps> = ({}) => {
+const CartTotalsSection: FC<CartTotalsSectionProps> = ({totalPrice}) => {
   return (
     <section className="cart-totals-section">
       <div className="container">
@@ -17,7 +19,7 @@ const CartTotalsSection: FC<CartTotalsSectionProps> = ({}) => {
             <ul>
               <li>
                 <span>Subtotal</span>
-                <span>$59.00</span>
+                <span>${totalPrice !== undefined ? totalPrice.toFixed(2): "0"}</span>
               </li>
               <li>
                 <span>Shipping Fee</span>
@@ -25,7 +27,7 @@ const CartTotalsSection: FC<CartTotalsSectionProps> = ({}) => {
               </li>
               <li>
                 <span className={arimo.className}>Total</span>
-                <span>$59.00</span>
+                <span>${totalPrice !== undefined ? totalPrice.toFixed(2): "0"}</span>
               </li>
             </ul>
             <Link href="/checkout">Proceed To Checkout</Link>

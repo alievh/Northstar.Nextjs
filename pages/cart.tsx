@@ -13,9 +13,10 @@ interface cartProps {}
 const Cart: FC<cartProps> = ({}) => {
   const dispatch = useDispatch();
 
-  const basket = useSelector<RootState, BasketType[]>(
+  const basket: BasketType = useSelector<RootState, BasketType>(
     (state: any) => state.BasketSlice.basket
   );
+  console.log(basket);
 
   useEffect(() => {
     GetBasket(dispatch);
@@ -29,8 +30,8 @@ const Cart: FC<cartProps> = ({}) => {
       </Head>
       <main>
         <CartExpandNavigationSection />
-        <CartProductsSection />
-        <CartTotalsSection />
+        <CartProductsSection basket={basket} />
+        <CartTotalsSection totalPrice={basket.total} />
       </main>
     </>
   );
