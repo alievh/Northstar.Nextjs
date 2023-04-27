@@ -1,13 +1,14 @@
 import { Arimo } from "next/font/google";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store";
 import BurgerMenu from "./BurgerMenu";
 import { Router } from "next/router";
 import Button from "./ui/Button";
 import Image from "next/image";
 import { burgerMenuAction } from "@/store/BurgerMenu/BurgerMenuSlice";
+import { BasketType } from "@/types/basket.type";
+import { getBasket } from "@/store/Basket/BasketSlice";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
@@ -20,9 +21,15 @@ const Navbar: FC<NavbarProps> = ({}) => {
     dispatch(burgerMenuAction.toogleBurgerMenu());
   };
 
+  const basket: BasketType = useSelector((state: any) => state.BasketSlice.basket);
+
   Router.events.on("routeChangeStart", () => {
     dispatch(burgerMenuAction.setBurgerMenu(false));
   });
+
+  // useEffect(() => {
+  //   GetBasket(dispatch);
+  // });
 
   return (
     <header id="header">
@@ -63,6 +70,9 @@ const Navbar: FC<NavbarProps> = ({}) => {
                   width={25}
                   alt="Shopping bag Icon"
                 />
+                <div className="cart-counter">
+                    <span>{basket.count}</span>
+                </div>
               </Link>
             </li>
             <li className="navigation__icons-item">

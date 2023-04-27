@@ -18,7 +18,7 @@ export default function Home() {
         <title>Northstar | E-commerce</title>
         <meta name="description" content="Northstart E-commerce" />
       </Head>
-      <main>
+      <>
         <HomeBannerSection />
         <HomeProductsSection
           sectionTitle="Discover NEW Arrivals"
@@ -34,7 +34,7 @@ export default function Home() {
           products={bestSellers}
           loading={loading}
         />
-      </main>
+      </>
     </>
   );
 }

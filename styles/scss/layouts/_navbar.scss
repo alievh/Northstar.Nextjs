@@ -52,6 +52,7 @@
 
       &-item {
         margin-right: 28px;
+        position: relative;
 
         @media screen and (max-width: 992px) {
           display: none;
@@ -70,9 +71,24 @@
             display: block;
           }
         }
+
+        .cart-counter {
+          @include flex(center,center);
+          position: absolute;
+          width: 21px;
+          height: 21px;
+          border-radius: 50%;
+          background-color: #024e82;
+
+          top: -8px;
+          right: -8px;
+
+          span {
+            color: $white;
+            font-size: 10px;
+          }
+        }
       }
     }
   }
 }
-
-

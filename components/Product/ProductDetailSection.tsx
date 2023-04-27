@@ -9,7 +9,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { ProductType } from "@/types/product.type";
 import { Arimo, Lato, Source_Sans_Pro } from "next/font/google";
 import { BasketItemType } from "@/types/basketItem.type";
-import { AddToBasket } from "@/store/Basket/BasketSlice";
+import { addToBasket } from "@/store/Basket/BasketSlice";
 import { useDispatch } from "react-redux";
 import Notiflix from "notiflix";
 
@@ -39,7 +39,7 @@ const ProductDetailSection: FC<ProductDetailSectionProps> = ({ data }) => {
       quantity: 1,
     };
 
-    AddToBasket(dispatch, basket);
+    addToBasket(dispatch, basket);
     Notiflix.Notify.success("Product added to cart", {
       ID: "MKA",
       timeout: 1500,

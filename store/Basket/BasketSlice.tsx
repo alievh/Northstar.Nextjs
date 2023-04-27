@@ -3,7 +3,11 @@ import { BasketItemType } from "@/types/basketItem.type";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialBasket = {
-  basket: {},
+  basket: {
+    products: null,
+    total: 0,
+    count: 0,
+  },
 };
 
 const BasketSlice = createSlice({
@@ -16,7 +20,7 @@ const BasketSlice = createSlice({
   },
 });
 
-export function GetBasket(dispatch: any) {
+export function getBasket(dispatch: any) {
   const basketJson = localStorage.getItem("basket");
 
   if (basketJson !== null) {
@@ -24,7 +28,7 @@ export function GetBasket(dispatch: any) {
   }
 }
 
-export function AddToBasket(dispatch: any, basketItem: BasketItemType) {
+export function addToBasket(dispatch: any, basketItem: BasketItemType) {
   const basketJson = localStorage.getItem("basket");
 
   if (basketJson !== null) {
@@ -56,7 +60,7 @@ export function AddToBasket(dispatch: any, basketItem: BasketItemType) {
   }
 }
 
-export function RemoveFromBasket(dispatch: any, id: number) {
+export function removeFromBasket(dispatch: any, id: number) {
   const basketJson = localStorage.getItem("basket");
 
   if (basketJson !== null) {
@@ -78,7 +82,7 @@ export function RemoveFromBasket(dispatch: any, id: number) {
   }
 }
 
-export function ChangeQuantityBasket(
+export function changeQuantityBasket(
   dispatch: any,
   id: number,
   quantity: number
@@ -107,9 +111,9 @@ export function ChangeQuantityBasket(
   }
 }
 
-export function ClearBasket(dispatch: any) {
+export function clearBasket(dispatch: any) {
   localStorage.removeItem("basket");
-  dispatch(setBasket({}));
+  dispatch(setBasket(initialBasket));
 }
 
 export const { setBasket } = BasketSlice.actions;

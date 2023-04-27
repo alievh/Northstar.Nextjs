@@ -14,12 +14,12 @@ const About: FC<aboutProps> = ({}) => {
         <title>Northstar | About</title>
         <meta name="description" content="Northstart E-commerce" />
       </Head>
-      <main>
+      <>
         <AboutBannerSection />
         <AboutBuyBannerSection />
         <AboutFoundersSection />
         <AboutTestimonialsSection />
-      </main>
+      </>
     </>
   );
 };

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \"json-server ./data/products.json --port=3100\"",
+    "dev": "concurrently \"next dev\" \"json-server --watch ./data/products.json --routes ./data/routes.json --port=3100\"",
     "build": "next build",
     "start": "concurrently \"next start\" \"json-server ./data/products.json --port=3100\"",
     "lint": "next lint",

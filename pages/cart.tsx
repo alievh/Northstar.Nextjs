@@ -2,7 +2,7 @@ import CartExpandNavigationSection from "@/components/Cart/CartExpandNavigationS
 import CartProductsSection from "@/components/Cart/CartProductsSection";
 import CartTotalsSection from "@/components/Cart/CartTotalsSection";
 import { RootState } from "@/store";
-import { GetBasket } from "@/store/Basket/BasketSlice";
+import { getBasket } from "@/store/Basket/BasketSlice";
 import { BasketType } from "@/types/basket.type";
 import Head from "next/head";
 import { FC, useEffect } from "react";
@@ -18,7 +18,7 @@ const Cart: FC<cartProps> = ({}) => {
   );
 
   useEffect(() => {
-    GetBasket(dispatch);
+    getBasket(dispatch);
   }, []);
 
   return (
@@ -27,7 +27,7 @@ const Cart: FC<cartProps> = ({}) => {
         <title>Northstar | Cart</title>
         <meta name="description" content="Northstart E-commerce" />
       </Head>
-      <main>
+      <>
         <CartExpandNavigationSection />
         {Object.keys(basket).length !== 0 && basket.count !== 0 ? (
           <>
@@ -41,7 +41,7 @@ const Cart: FC<cartProps> = ({}) => {
             </div>
           </div>
         )}
-      </main>
+      </>
     </>
   );
 };

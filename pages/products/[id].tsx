@@ -35,10 +35,10 @@ const SingleProduct: FC<singleProductProps> = ({ data }) => {
         <title>Northstar | Product</title>
         <meta name="description" content="Northstart E-commerce" />
       </Head>
-      <main>
+      <>
         <ProductDetailSection data={data} />
         <ProductDescriptionSection data={data} />
-      </main>
+      </>
     </>
   );
 };

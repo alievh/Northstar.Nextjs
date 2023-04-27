@@ -5,10 +5,10 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { BasketType } from "@/types/basket.type";
-import { BillingDetailType } from "@/types/billing-detail.type";
 import { OrderType } from "@/types/order.type";
-import { ClearBasket } from "@/store/Basket/BasketSlice";
+import { clearBasket } from "@/store/Basket/BasketSlice";
 import Notiflix from "notiflix";
+import { CheckoutType } from "@/types/checkout.type";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
 
@@ -16,11 +16,13 @@ interface CheckoutBillingSectionProps {}
 
 const CheckoutBillingSection: FC<CheckoutBillingSectionProps> = ({}) => {
   const dispatch = useDispatch();
-  const [fullname, setFullname] = useState<string>();
-  const [street, setStreet] = useState<string>();
-  const [city, setCity] = useState<string>();
-  const [phone, setPhone] = useState<string>();
-  const [email, setEmail] = useState<string>();
+  const [checkoutInfo, setCheckoutInfo] = useState<CheckoutType>({
+    fullname: "",
+    street: "",
+    city: "",
+    phone: "",
+    email: "",
+  });
 
   const basket = useSelector<RootState, BasketType>(
     (state: any) => state.BasketSlice.basket
@@ -29,34 +31,29 @@ const CheckoutBillingSection: FC<CheckoutBillingSectionProps> = ({}) => {
   const formSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const billingDetail: BillingDetailType = {
-      fullname: fullname,
-      street: street,
-      city: city,
-      phone: phone,
-      email: email,
-    };
-
     const order: OrderType = {
-      billingDetail: billingDetail,
+      billingDetail: checkoutInfo,
       basket: basket,
     };
 
-    setFullname("");
-    setStreet("");
-    setCity("");
-    setPhone("");
-    setEmail("");
-    ClearBasket(dispatch);
+    setCheckoutInfo({
+      fullname: "",
+      street: "",
+      city: "",
+      phone: "",
+      email: "",
+    });
+    clearBasket(dispatch);
     console.log(JSON.stringify(order));
 
     Notiflix.Report.success(
       "Order accepted",
-      'Your order accepted successfully check console :D',
-      "Okay"
-    , {
-      svgSize: '35px',
-    });
+      "Your order accepted successfully check console :D",
+      "Okay",
+      {
+        svgSize: "35px",
+      }
+    );
   };
 
   return (
@@ -74,8 +71,8 @@ const CheckoutBillingSection: FC<CheckoutBillingSectionProps> = ({}) => {
                   id="fullname"
                   required={true}
                   name="fullname"
-                  value={fullname}
-                  onChange={(event) => setFullname(event.target.value)}
+                  value={checkoutInfo.fullname}
+                  onChange={(event) => setCheckoutInfo({...checkoutInfo, fullname: event.target.value})}
                 />
               </div>
               <div className="form-street">
@@ -87,8 +84,8 @@ const CheckoutBillingSection: FC<CheckoutBillingSectionProps> = ({}) => {
                   placeholder="House number and street name"
                   required={true}
                   name="street"
-                  value={street}
-                  onChange={(event) => setStreet(event.target.value)}
+                  value={checkoutInfo.street}
+                  onChange={(event) => setCheckoutInfo({...checkoutInfo, street: event.target.value})}
                 />
               </div>
               <div className="form-city">
@@ -99,8 +96,8 @@ const CheckoutBillingSection: FC<CheckoutBillingSectionProps> = ({}) => {
                   id="city"
                   required={true}
                   name="city"
-                  value={city}
-                  onChange={(event) => setCity(event.target.value)}
+                  value={checkoutInfo.city}
+                  onChange={(event) => setCheckoutInfo({...checkoutInfo, city: event.target.value})}
                 />
               </div>
               <div className="form-phone">
@@ -111,8 +108,8 @@ const CheckoutBillingSection: FC<CheckoutBillingSectionProps> = ({}) => {
                   id="phone"
                   required={true}
                   name="phone"
-                  value={phone}
-                  onChange={(event) => setPhone(event.target.value)}
+                  value={checkoutInfo.phone}
+                  onChange={(event) => setCheckoutInfo({...checkoutInfo, phone: event.target.value})}
                 />
               </div>
               <div className="form-email">
@@ -123,8 +120,8 @@ const CheckoutBillingSection: FC<CheckoutBillingSectionProps> = ({}) => {
                   id="email"
                   required={true}
                   name="email"
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
+                  value={checkoutInfo.email}
+                  onChange={(event) => setCheckoutInfo({...checkoutInfo, email: event.target.value})}
                 />
               </div>
             </form>

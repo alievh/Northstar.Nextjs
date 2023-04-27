@@ -5,7 +5,7 @@ import Input from "../ui/Input";
 import { Arimo, Baloo_2 } from "next/font/google";
 import { BasketType } from "@/types/basket.type";
 import { BasketItemType } from "@/types/basketItem.type";
-import { ChangeQuantityBasket, RemoveFromBasket } from "@/store/Basket/BasketSlice";
+import { changeQuantityBasket, removeFromBasket } from "@/store/Basket/BasketSlice";
 import { useDispatch } from "react-redux";
 
 const arimo = Arimo({ weight: "700", subsets: ["latin"] });
@@ -19,12 +19,12 @@ const CartProductsSection: FC<CartProductsSectionProps> = ({ basket }) => {
   const dispatch = useDispatch();
 
   const removeFromBasketHandler = (id: number) => {
-    RemoveFromBasket(dispatch, id);
+    removeFromBasket(dispatch, id);
   };
 
-  const changeQuantityBasket = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const changeQuantity = (event: React.ChangeEvent<HTMLInputElement>) => {
     const {id, value} = event.target;
-    ChangeQuantityBasket(dispatch, +id, +value);
+    changeQuantityBasket(dispatch, +id, +value);
   }
 
   return (
@@ -75,7 +75,7 @@ const CartProductsSection: FC<CartProductsSectionProps> = ({ basket }) => {
                         className="product-quantity-input"
                         type="number"
                         defaultValue={product.quantity}
-                        onChange={changeQuantityBasket}
+                        onChange={changeQuantity}
                         min={1}
                       />
                     </td>

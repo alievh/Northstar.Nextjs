@@ -145,6 +145,7 @@ nav {
 
 #header .navigation__icons-item {
   margin-right: 28px;
+  position: relative;
 }
 
 @media screen and (max-width: 992px) {
@@ -167,6 +168,24 @@ nav {
   #header .navigation__icons-item:last-child {
     display: block;
   }
+}
+
+#header .navigation__icons-item .cart-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #024e82;
+  top: -8px;
+  right: -8px;
+}
+
+#header .navigation__icons-item .cart-counter span {
+  color: #fff;
+  font-size: 10px;
 }
 
 #footer {
@@ -620,6 +639,7 @@ nav {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
   top: 0;
+  z-index: 40;
   right: -45vw;
   transition: 0.3s all ease-in;
 }
